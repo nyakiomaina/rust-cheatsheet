@@ -1,2 +1,2 @@
 # rust-cheatsheet
-* (https://cheats.rs/)
+* https://cheats.rs/
