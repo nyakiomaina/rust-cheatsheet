@@ -44,6 +44,27 @@ match message {
 }
 // The match expression is used to compare the variant of the message value and execute the appropriate code based on the variant that is present.
 
-// 
 ```
+* STRUCT
 
+``` rust
+struct User {
+    name : String,
+    age : i32,
+    email: String,
+    active: bool,
+}
+
+let user = User {
+    name: String::from("nyakio maina"),
+    age:25.
+    email: String::from("carolinenyakio21@gmail.com"),
+    active: true,
+};
+
+match user {
+    User { age, active:true, ...} if age >= 25 => println!("Active user over 25"),
+    User { age, active: true, ...} => println!("Active user under 25"),
+    User { active: false, ...} => println!("The user is inactve")
+}
+```
