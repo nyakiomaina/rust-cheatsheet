@@ -25,7 +25,7 @@ match value{
 * The _ pattern is a catch-all that matches any value that doesn't match any of the other patterns.
 
 * How match can be used to destruct enum, struct and tuples
- * struct
+ ** ENUM
  ``` rust
 enum Message {
     Quit,
