@@ -26,7 +26,7 @@ match value{
 
 * How match can be used to destruct enum, struct and tuples
  * struct
- ```
+ ``` rust
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
