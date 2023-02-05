@@ -22,4 +22,28 @@ match value{
     _ => println!("other");
 }
 ```
+* The _ pattern is a catch-all that matches any value that doesn't match any of the other patterns.
+
+* How match can be used to destruct enum, struct and tuples
+ * struct
+ ```
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+
+let message = Message::Move { x: 3, y: 4 };
+
+match message {
+    Message::Quit => println!("The program is quitting"),
+    Message::Move { x, y } => println!("Moving to ({}, {})", x, y),
+    Message::Write(text) => println!("Writing message: {}", text),
+    Message::ChangeColor(r, g, b) => println!("Changing color to RGB({}, {}, {})", r, g, b),
+}
+// The match expression is used to compare the variant of the message value and execute the appropriate code based on the variant that is present.
+
+// 
+```
 
